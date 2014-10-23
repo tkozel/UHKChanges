@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeDetailActivity" >
+
+    <TextView
+        android:id="@+id/labAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/labAuthor"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/labFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/labAuthor"
+        android:layout_below="@+id/labAuthor"
+        android:text="@string/labFrom"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/labTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labFrom"
+        android:layout_below="@+id/labFrom"
+        android:text="@string/labTo"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/labFrom"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/labAuthor"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/labTo"
+        android:layout_alignLeft="@+id/tvAuthor"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/labTo"
+        android:layout_alignBottom="@+id/labTo"
+        android:layout_alignLeft="@+id/tvFrom"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labAuthor"
+        android:layout_below="@+id/labTo"
+        android:layout_marginTop="28dp"
+        android:text="@string/labDesc"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/detailTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Medium Text"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

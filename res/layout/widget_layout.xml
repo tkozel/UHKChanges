@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wdg_bgr"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wdg_title_bgr" >
+
+        <ImageView
+            android:id="@+id/wdgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/fim_ico" />
+
+        <TextView
+            android:id="@+id/wdgTitle"
+            android:layout_width="0pt"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/wdgCaption"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/wdgRefreshButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="2dp"
+            android:background="@drawable/wdg_button_bgr"
+            android:contentDescription="@string/menu_refresh"
+            android:src="@drawable/ic_menu_refresh" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/widgetList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</LinearLayout>

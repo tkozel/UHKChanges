@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_refresh"
+        android:title="@string/menu_refresh"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText" android:icon="@drawable/ic_menu_refresh"/>
+    
+    <item android:id="@+id/menu_setup" android:title="@string/menu_setup" android:showAsAction="never"></item><item android:id="@+id/menu_filter" android:title="@string/menu_filter"></item><item android:id="@+id/menu_about" android:title="@string/menuAbout" android:showAsAction="never"></item>
+    
+</menu>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/kwordsTvTitle"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+
+        <EditText
+            android:id="@+id/edSetupKeyWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            tools:ignore="TextFields" />
+
+        <Button
+            android:id="@+id/btSetupAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kwordsBtAdd" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvSetupKeyWords"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp" >
+    </ListView>
+
+</LinearLayout>

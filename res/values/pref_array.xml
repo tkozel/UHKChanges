@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sync_freq_labels">
+        <item>manuálně</item>
+        <item>1 hodina</item>
+        <item>2 hodiny</item>
+        <item>4 hodiny</item>
+        <item>1 den</item>
+    </string-array>
+    <string-array name="sync_freq_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="faculties">
+        <item>FF</item>
+        <item>FIM</item>
+        <item>PDF</item>
+        <item>PRF</item>
+        <item>USP</item>
+    </string-array>
+
+</resources>

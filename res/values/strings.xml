@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UHK Změny</string>
+    <string name="title_change_detail">Detail změny</string>
+	<string name="menu_refresh">Refresh</string>
+    <string name="labFrom">Od:</string>
+    <string name="labTo">Do:</string>
+    <string name="labAuthor">Autor:</string>
+    <string name="labDesc">Popis</string>
+    <string name="progTitle">Vyčkejte</string>
+    <string name="progMsg">stahují se aktuální data.</string>
+    <string name="errorMsg">Chyba v připojení</string>
+    <string name="menuAbout">O aplikaci</string>
+    <string name="aboutTitle">Informace o aplikaci</string>
+    <string name="aboutText1">UHK - změny ve výuce</string>
+    <string name="aboutCopy">© 2014 Tomáš Kozel, FIM UHK</string>
+    <string name="aboutDesc">Jednoduchá aplikace, která zobrazuje aktuální změny ve výuce na Univerzitě Hradec Králové.</string>
+    <string name="appwTitle">Změny ve výuce</string>
+    <string name="appwLabel">Celkem:</string>
+    <string name="appwToday">Dnes:</string>
+    <string name="kwordsBtAdd">Přidat</string>
+    <string name="kwordsTvTitle">Nastavte klíčová slova pro filtr sledovaných aktivit (smazání=dlouhý stisk položky)</string>
+    <string name="keywords_activity_title">Nastavení filtru</string>
+    <string name="menu_setup">Nastavení</string>
+    <string name="msgConfirmDelete">Opravdu chcete položku smazat?</string>
+    <string name="btYes">Ano</string>
+    <string name="btNo">Ne</string>
+    <string name="rss_url">https://www.uhk.cz/cs-CZ/%s/Studium/Rozvrhy/Zmeny-ve-vyuce</string>
+    <string name="wdgCaption">UHK</string>
+    <string name="strToday">Dnes</string>
+    <string name="strTomorrow">Zítra</string>
+    <string name="strATomorrow">Pozítří</string>
+    <string name="strZero">0</string>
+    <string name="menu_filter">Filtr</string>
+</resources>

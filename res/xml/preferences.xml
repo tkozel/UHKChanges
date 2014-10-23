@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <ListPreference android:entries="@array/sync_freq_labels" 
+        android:dialogTitle="Interval obnovy" android:entryValues="@array/sync_freq_values" android:title="Frekvence synchronizací" android:key="sync_freq" android:defaultValue="0"/>
+	<ListPreference android:entries="@array/faculties" 
+        android:dialogTitle="Fakulta/Součást" android:entryValues="@array/faculties" android:title="Výběr součásti UHK" android:key="faculty" android:defaultValue="FIM"/>
+        
+</PreferenceScreen>
