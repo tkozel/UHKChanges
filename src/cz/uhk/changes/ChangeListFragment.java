@@ -56,7 +56,7 @@ public class ChangeListFragment extends SherlockListFragment {
 	 * The fragment's current callback object, which is notified of list item
 	 * clicks.
 	 */
-	private Callbacks mCallbacks = sChangesCallbacks;
+	private Callbacks mCallbacks = sDummyCallbacks;
 
 	/**
 	 * The current activated item position. Only used on tablets.
@@ -79,7 +79,7 @@ public class ChangeListFragment extends SherlockListFragment {
 	 * A dummy implementation of the {@link Callbacks} interface that does
 	 * nothing. Used only when this fragment is not attached to an activity.
 	 */
-	private static Callbacks sChangesCallbacks = new Callbacks() {
+	private static Callbacks sDummyCallbacks = new Callbacks() {
 		@Override
 		public void onItemSelected(int id) {
 		}
@@ -129,14 +129,13 @@ public class ChangeListFragment extends SherlockListFragment {
 		super.onDetach();
 
 		// Reset the active callbacks interface to the dummy implementation.
-		mCallbacks = sChangesCallbacks;
+		mCallbacks = sDummyCallbacks;
 	}
 
 	@Override
 	public void onListItemClick(ListView listView, View view, int position,
 			long id) {
 		super.onListItemClick(listView, view, position, id);
-
 		mCallbacks.onItemSelected(position);
 	}
 

@@ -1,10 +1,10 @@
 package cz.uhk.changes;
 
+import com.actionbarsherlock.app.SherlockActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v4.app.NavUtils;
-import android.view.MenuItem;
 
 /**
  * An activity representing a single Change detail screen. This activity is only
@@ -14,7 +14,7 @@ import android.view.MenuItem;
  * This activity is mostly just a 'shell' activity containing nothing more than
  * a {@link ChangeDetailFragment}.
  */
-public class ChangeDetailActivity extends Activity {
+public class ChangeDetailActivity extends SherlockActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,8 @@ public class ChangeDetailActivity extends Activity {
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
+	public boolean onOptionsItemSelected(
+			com.actionbarsherlock.view.MenuItem item) {
 		int id = item.getItemId();
 		if (id == android.R.id.home) {
 			NavUtils.navigateUpTo(this, new Intent(this,
@@ -45,4 +46,5 @@ public class ChangeDetailActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
 }
