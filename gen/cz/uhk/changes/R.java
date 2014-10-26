@@ -1036,13 +1036,6 @@ containing a value of this type.
     For more on layout aliases, see:
     http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
     
-
-    Layout alias to replace the single-pane version of the layout with a
-    two-pane version on Large screens.
-
-    For more on layout aliases, see:
-    http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
-    
          */
         public static final int activity_change_list=0x7f030016;
         public static final int activity_change_twopane=0x7f030017;
