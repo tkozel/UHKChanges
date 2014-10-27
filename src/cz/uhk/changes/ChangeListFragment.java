@@ -5,21 +5,20 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockListFragment;
 
 import cz.uhk.changes.tools.ChangesManager;
 import cz.uhk.changes.R;
 import cz.uhk.changes.model.Change;
 import cz.uhk.changes.tools.TimeUtils;
-import cz.uhk.changes.RefreshAlarmReceiver;
 import cz.uhk.changes.widget.FimChangesWidgetProvider;
 import cz.uhk.changes.KeywordsActivity;
 import cz.uhk.changes.PrefActivity;
 import android.annotation.SuppressLint;
+import android.app.ActionBar.OnNavigationListener;
 import android.app.Activity;
-import android.app.AlarmManager;
 import android.app.AlertDialog;
-import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -32,15 +31,20 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.content.DialogInterface.OnClickListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Fragment seznamu změn v rozcrhu
+ * @author Tomas Kozel
+ *
+ */
 public class ChangeListFragment extends SherlockListFragment {
 
 	private static final String STATE_ACTIVATED_POSITION = "activated_position";
@@ -95,6 +99,25 @@ public class ChangeListFragment extends SherlockListFragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		android.app.ActionBar actionBar = getSherlockActivity().getActionBar();
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+		
+		SpinnerAdapter spAd = ArrayAdapter.createFromResource(getSherlockActivity(), R.array.faculties, R.layout.faculty_item_layout);
+				
+		actionBar.setListNavigationCallbacks(spAd, new OnNavigationListener() {
+			
+			@Override
+			public boolean onNavigationItemSelected(int itemPosition, long itemId) {
+				String[] fs = getSherlockActivity().getResources().getStringArray(R.array.faculties);
+				SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getSherlockActivity());
+				if (!pref.getString("faculty", "").equals(fs[itemPosition])) {
+					pref.edit().putString("faculty", fs[itemPosition]).commit();
+					refreshData();
+				}
+				return true;
+			}
+		});
 		
 		refreshView(ChangesManager.getInstance().getChanges(getActivity()));
 	}
@@ -244,12 +267,26 @@ public class ChangeListFragment extends SherlockListFragment {
 				return v;
 			}
 		});
-		String title = PreferenceManager.getDefaultSharedPreferences(getActivity()).getString("faculty", "FIM")
-				+ getActivity().getString(R.string.app_name).substring(3);
-		getActivity().setTitle(title);
+		checkOrSetFacultyDropDown();
 	}
 	
 	
+	private void checkOrSetFacultyDropDown() {
+		String[] fa = getSherlockActivity().getResources().getStringArray(R.array.faculties);
+		int i = getSherlockActivity().getActionBar().getSelectedNavigationIndex();
+		String prefVal = PreferenceManager.getDefaultSharedPreferences(getSherlockActivity()).getString("faculty", "FIM");
+		if (!fa[i].equals(prefVal)) {
+			int j;
+			for (j = 0; j<fa.length; j++) {
+				if (fa[j].equals(prefVal)) {
+					break;
+				}
+			}
+			if (j<fa.length)
+				getSherlockActivity().getActionBar().setSelectedNavigationItem(j);
+		}
+	}
+
 	private void updateWidget() {
 		AppWidgetManager aw = AppWidgetManager.getInstance(getActivity());
 		int[] ids = aw.getAppWidgetIds(new ComponentName(getActivity(),
@@ -289,6 +326,7 @@ public class ChangeListFragment extends SherlockListFragment {
 		startActivityForResult(intent, REQUEST_SETUP);
 	}
 	
+	@SuppressLint("InflateParams")
 	private void showAboutDlg() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 		builder.setTitle(getString(R.string.aboutTitle));
@@ -296,7 +334,7 @@ public class ChangeListFragment extends SherlockListFragment {
 
 		builder.setView(getActivity().getLayoutInflater()
 				.inflate(R.layout.dialog_about, null));
-		builder.setPositiveButton("OK", new OnClickListener() {
+		builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {

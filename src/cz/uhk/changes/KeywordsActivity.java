@@ -16,6 +16,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+/**
+ * Aktivita pro nastavení filtru klíčových slov v nadpisech rozvrhových změn
+ * @author Tomas Kozel
+ *
+ */
 public class KeywordsActivity extends Activity {
 	List<String> keywords = null;
 	private EditText edKeyword;

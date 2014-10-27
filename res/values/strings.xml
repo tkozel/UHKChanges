@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">UHK Změny</string>
+    <string name="app_name">Změny</string>
     <string name="title_change_detail">Detail změny</string>
 	<string name="menu_refresh">Refresh</string>
     <string name="labFrom">Od:</string>
@@ -33,4 +33,5 @@
     <string name="strATomorrow">Pozítří</string>
     <string name="strZero">0</string>
     <string name="menu_filter">Filtr</string>
+    
 </resources>

@@ -918,6 +918,7 @@ containing a value of this type.
         public static final int wdg_title_bgr=0x7f020075;
     }
     public static final class id {
+        public static final int TextView=0x7f050034;
         public static final int abs__action_bar=0x7f050020;
         public static final int abs__action_bar_container=0x7f05001f;
         public static final int abs__action_bar_subtitle=0x7f050011;
@@ -964,36 +965,36 @@ containing a value of this type.
         public static final int edSetupKeyWord=0x7f050035;
         public static final int edit_query=0x7f050026;
         public static final int homeAsUp=0x7f050006;
-        public static final int labAuthor=0x7f05003a;
-        public static final int labFrom=0x7f05003c;
-        public static final int labTo=0x7f05003d;
+        public static final int labAuthor=0x7f05003b;
+        public static final int labFrom=0x7f05003d;
+        public static final int labTo=0x7f05003e;
         public static final int listMode=0x7f050002;
         public static final int lvSetupKeyWords=0x7f050037;
-        public static final int menu_about=0x7f05004c;
-        public static final int menu_filter=0x7f05004b;
-        public static final int menu_refresh=0x7f050049;
-        public static final int menu_setup=0x7f05004a;
+        public static final int menu_about=0x7f05004d;
+        public static final int menu_filter=0x7f05004c;
+        public static final int menu_refresh=0x7f05004a;
+        public static final int menu_setup=0x7f05004b;
         public static final int normal=0x7f050001;
         public static final int showCustom=0x7f050008;
         public static final int showHome=0x7f050005;
         public static final int showTitle=0x7f050007;
         public static final int tabMode=0x7f050003;
-        public static final int textView1=0x7f050034;
         public static final int textView2=0x7f050039;
         public static final int textView3=0x7f050038;
-        public static final int tvAuthor=0x7f05003e;
-        public static final int tvDesc=0x7f050041;
-        public static final int tvFrom=0x7f05003f;
-        public static final int tvTitle=0x7f05003b;
-        public static final int tvTo=0x7f050040;
+        public static final int tvAuthor=0x7f05003f;
+        public static final int tvDesc=0x7f050042;
+        public static final int tvFacultyDd=0x7f05003a;
+        public static final int tvFrom=0x7f050040;
+        public static final int tvTitle=0x7f05003c;
+        public static final int tvTo=0x7f050041;
         public static final int useLogo=0x7f050004;
-        public static final int wdgAuthor=0x7f050048;
-        public static final int wdgDate=0x7f050047;
-        public static final int wdgIcon=0x7f050042;
-        public static final int wdgLinLayout=0x7f050046;
-        public static final int wdgRefreshButton=0x7f050044;
-        public static final int wdgTitle=0x7f050043;
-        public static final int widgetList=0x7f050045;
+        public static final int wdgAuthor=0x7f050049;
+        public static final int wdgDate=0x7f050048;
+        public static final int wdgIcon=0x7f050043;
+        public static final int wdgLinLayout=0x7f050047;
+        public static final int wdgRefreshButton=0x7f050045;
+        public static final int wdgTitle=0x7f050044;
+        public static final int widgetList=0x7f050046;
         public static final int wrap_content=0x7f050000;
     }
     public static final class integer {
@@ -1041,14 +1042,15 @@ containing a value of this type.
         public static final int activity_change_twopane=0x7f030017;
         public static final int activity_keywords=0x7f030018;
         public static final int dialog_about=0x7f030019;
-        public static final int fragment_change_detail=0x7f03001a;
-        public static final int row_layout=0x7f03001b;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001c;
-        public static final int sherlock_spinner_item=0x7f03001d;
-        public static final int widget_layout=0x7f03001e;
-        public static final int widget_row_layout=0x7f03001f;
-        public static final int widget_row_layout2=0x7f030020;
-        public static final int widget_row_layout2_high=0x7f030021;
+        public static final int faculty_item_layout=0x7f03001a;
+        public static final int fragment_change_detail=0x7f03001b;
+        public static final int row_layout=0x7f03001c;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001d;
+        public static final int sherlock_spinner_item=0x7f03001e;
+        public static final int widget_layout=0x7f03001f;
+        public static final int widget_row_layout=0x7f030020;
+        public static final int widget_row_layout2=0x7f030021;
+        public static final int widget_row_layout2_high=0x7f030022;
     }
     public static final class menu {
         public static final int activity_main=0x7f0d0000;

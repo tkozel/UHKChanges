@@ -11,9 +11,7 @@ import cz.uhk.changes.R;
 import cz.uhk.changes.tools.ChangesManager;
 
 /**
- * A fragment representing a single Change detail screen. This fragment is
- * either contained in a {@link ChangeListActivity} in two-pane mode (on
- * tablets) or a {@link ChangeDetailActivity} on handsets.
+ * Fragment detailu změny rozvrhu
  */
 public class ChangeDetailFragment extends Fragment {
 	/**

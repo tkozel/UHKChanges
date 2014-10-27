@@ -3,6 +3,12 @@ package cz.uhk.changes.sql;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+/**
+ * Helper pro práci s SQLite databází
+ * DB udržuje seznam posledně načtených změn a seznam klíčových slov pro filtrování obsahu
+ * @author Tomas Kozel
+ *
+ */
 public class SqlHelper extends android.database.sqlite.SQLiteOpenHelper {
 
 	private static final String SQL_CREATE = "CREATE TABLE changes (title TEXT, author TEXT, tfrom TEXT, tto TEXT, descr TEXT)";
