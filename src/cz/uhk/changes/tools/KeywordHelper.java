@@ -5,6 +5,11 @@ import java.util.*;
 import cz.uhk.changes.sql.KeywordDao;
 import android.content.Context;
 
+/**
+ * Helper pro práci s klíčovými slovy filtru - singleton
+ * @author Tomas Kozel
+ *
+ */
 public class KeywordHelper {
 	private static KeywordHelper _instance;
 	private List<String> lst;

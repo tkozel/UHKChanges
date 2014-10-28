@@ -12,6 +12,11 @@ import cz.uhk.changes.sql.ChangeDao;
 import cz.uhk.changes.sql.KeywordDao;
 import cz.uhk.changes.model.Change;
 
+/**
+ * Singleton pro přístup k záladním operacím aplikační logiky
+ * @author Tomas Kozel
+ *
+ */
 @SuppressLint("SimpleDateFormat")
 public class ChangesManager {
 	public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("d.M.yyyy H:mm");

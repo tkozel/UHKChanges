@@ -13,6 +13,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
+/**
+ * Aktivita seznamu změn v rozvrhu - dle rozlišení displeje buď jedno nebo 
+ * dvou-fragmentová (master-detail)
+ * @author Tomas Kozel
+ *
+ */
 public class ChangeListActivity extends SherlockFragmentActivity implements
 		ChangeListFragment.Callbacks {
 	

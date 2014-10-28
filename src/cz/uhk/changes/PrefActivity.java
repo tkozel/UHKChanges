@@ -9,6 +9,12 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
+/**
+ * Nastavení aplikace - preference activity
+ * @author Tomas Kozel
+ *
+ */
+@SuppressWarnings("deprecation")
 public class PrefActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 
 	@Override

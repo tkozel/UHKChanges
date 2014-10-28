@@ -8,6 +8,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+/**
+ * DAO pro práci s klíčovými slovy filtru změn
+ * @author Tomas Kozel
+ *
+ */
 public class KeywordDao {
 	
 	private SqlHelper helper;

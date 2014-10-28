@@ -12,6 +12,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+/**
+ * Základní DAO pro práci s objektem změny rozvrhu
+ * @author Tomas Kozel
+ *
+ */
 public class ChangeDao {
 	private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 	private SqlHelper helper;

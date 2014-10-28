@@ -24,7 +24,8 @@ public class TimeUtils {
 	}
 	
 	/**
-	 * Zjisti, zda datum
+	 * Zjisti, zda datum změny odpovídá dnešnímu datu. Bere v úvahu možnost týdenního
+	 * opakování události v den týdne shodný s dnem prvního vypsaného data.
 	 * @param date
 	 * @return
 	 */
